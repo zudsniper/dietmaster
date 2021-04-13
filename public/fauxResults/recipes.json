@@ -1,0 +1,61 @@
+{
+	"recipes": [
+		{
+			"name": "chicken & rice",
+			"type":"ANY",
+			"image":"chickenAndRice.jpeg",
+			"elements": [
+				{
+					"name":"chicken",
+					"amount":"1-2 thighs"
+				},
+				{
+					"name":"rice",
+					"amount":"1 cup"
+				},
+				{
+					"name":"butter",
+					"amount":"1/2 stick"
+				}
+			]
+		},
+		{
+			"name": "spaghetti",
+			"type":"DINNER",
+			"image":"spaghetti.jpeg",
+			"elements": [
+				{
+					"name":"noodles",
+					"amount":"preference"
+				},
+				{
+					"name":"tomato sauce",
+					"amount":"preference"
+				},
+				{
+					"name":"ground beef",
+					"amount":"preference"
+				}
+			]
+		},
+		{
+			"name": "bacon & eggs",
+			"type":"BREAKFAST",
+			"image":"baconAndEggs.jpeg",
+			"elements": [
+				{
+					"name":"egg",
+					"amount":"1-4"
+				},
+				{
+					"name":"bacon",
+					"amount":"2-4 strips"
+				},
+				{
+					"name":"butter",
+					"amount":"enough to butter pan / alternatively cook in bacon grease"
+				}
+			]
+		}
+	]
+}

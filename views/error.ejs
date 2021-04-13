@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>DietMaster</title>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- assets -->
+		<!-- js -->
+		<script
+		  src="https://code.jquery.com/jquery-3.6.0.min.js"
+		  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		  crossorigin="anonymous">
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<!-- css -->
+		<link rel="stylesheet" href="stylesheets/style.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div id="main" class="col-lg-9 col-lg-push-3 text-center">
+					<h1>DietMaster</h1>
+					<h3>Error!</h3>
+					<div> <%= error %> </div>
+				</div>
+				<div id="sidebar" class="col-lg-3 col-lg-pull-9">
+					<li class="list-group">
+						<ul class="list-group-item"><a href="/">Home</a></ul>
+						<ul class="list-group-item"><a href="/search">Search</a></ul>
+					</li>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
