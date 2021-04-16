@@ -8,6 +8,7 @@ var favicon = require('serve-favicon');
 var indexRouter = require('./routes/index');
 var searchRouter = require('./routes/search');
 var usersRouter = require('./routes/users');
+var settingsRouter = require('./routes/settings');
 
 const port = 8000;
 
@@ -29,6 +30,7 @@ app.use(favicon(path.join(__dirname,'public','favicon.ico')));
 app.use('/', indexRouter);
 app.use('/search', searchRouter);
 app.use('/users', usersRouter);
+app.use('/settings', settingsRouter);
 
 //handle form 
 // app.post('/search', function (req, res) {
