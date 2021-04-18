@@ -1,7 +1,19 @@
 a {
-  color: #00B7FF;
+   background-color: aquamarine;
+   color: #00B7FF;
 }
 
 li {
   list-style-type: none;
+}
+
+div {
+   background-color: #d2f8d2;
+}
+h3 {
+   color: rgb(0, 0, 0);
+}
+
+div #sidebar{
+   color: aquamarine;
 }
