@@ -10,8 +10,8 @@ var searchRouter = require('./routes/search');
 var usersRouter = require('./routes/users');
 var settingsRouter = require('./routes/settings');
 var userProfileRouter = require('./routes/userProfile');
-/*var dietPrefrencesRouter = require('./routes/dietPrefrences');
 var notificationsRouter = require('./routes/notifications');
+/*var dietPrefrencesRouter = require('./routes/dietPrefrences');
 var accountSecurityRouter = require('./routes/accountSecurity');*/
 
 const port = 8000;
@@ -36,6 +36,7 @@ app.use('/search', searchRouter);
 app.use('/users', usersRouter);
 app.use('/settings', settingsRouter);
 app.use('/userProfile', userProfileRouter);
+app.use('/notifications', notificationsRouter);
 
 //handle form 
 // app.post('/search', function (req, res) {
