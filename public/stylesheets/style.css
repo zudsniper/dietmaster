@@ -17,3 +17,24 @@ h3 {
 div #sidebar{
    color: aquamarine;
 }
+
+div #back{
+   padding-right: 84%;
+}
+
+div #results{
+   background-color: #d2f8d2;
+}
+
+div #credential{
+   padding-left: 100px;
+}
+
+div #email{
+   padding-left: 137px;
+}
+
+div #UserType{
+   padding-left: 107px;
+   padding-bottom: 55px;
+}
