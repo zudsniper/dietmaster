@@ -3,13 +3,26 @@ var fs = require('fs');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
-  res.render('search', { results: null });
+	const userinfo = req.userContext && req.userContext.userinfo;
+  res.render('search', 
+  	{ 
+  		results: null,
+   		title: 'ejs',
+   		isLoggedIn: !!userinfo,
+     	userinfo: userinfo
+	});
 });
 
 router.post('/', function(req, res) {
 	console.log(req.body);
 	var searchResults = getSearchResults(req.body.search_query);
-  	res.render('search', { results: searchResults });
+  	res.render('search', 
+  		{
+  		 	results: searchResults,
+  		 	title: 'ejs',
+  		 	isLoggedIn: !!userinfo,
+	  		userinfo: userinfo
+  		});
 });
 
 module.exports = router;
