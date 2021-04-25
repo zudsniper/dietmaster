@@ -24,7 +24,7 @@
 					<form action="/search/" method="post">
 					    <label for="recipe">Enter search params, or nothing: </label>
 					    <input id="recipe" type="text" name="search_query" value="">
-					    <input type="submit" value="OK">
+					    <input class="btn btn-secondary" type="submit" value="OK">
 					</form>
 					<div id="results">
 						<% if(results) { %>
@@ -48,7 +48,7 @@
 					<li class="list-group">
 						<ul class="list-group-item"><a href="/">Home</a></ul>
 						<ul class="list-group-item"><a href="/search">Search</a></ul>
-						<ul class="list-group-item"><a href="/profile">Profile</a></ul>
+						<% if(isLoggedIn) {%><ul class="list-group-item"><a href="/profile">Profile</a></ul><% } %>
 					</li>
 				</div>
 			</div>

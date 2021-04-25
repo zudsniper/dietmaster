@@ -15,6 +15,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res) {
 	console.log(req.body);
+	const userinfo = req.userContext && req.userContext.userinfo;
 	var searchResults = getSearchResults(req.body.search_query);
   	res.render('search', 
   		{
