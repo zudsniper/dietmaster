@@ -21,7 +21,7 @@
 			<div class="row">
 				<div id="main" class="col-lg-9 col-lg-push-3 text-center">
 					<h1>DietMaster</h1>
-					<h3>Prototype version v1.0</h3>
+					<h3>Prototype version <strong>v2.0</strong></h3>
 					<img src="/images/dietmaster-logo.png">
 				</div>
 				<div id="sidebar" class="col-lg-3 col-lg-pull-9">
@@ -34,12 +34,21 @@
 			</div>
 			<% if(!isLoggedIn) { %>
 			<div class="row">
-				<div class="col-12">
+				<div class="col-12 center-block">
 					<form method="get" action="/login">
 					  <button class="btn btn-primary" type="submit">Log In</button>
 					</form>
 				</div>
 				<% } %>
+			</div>
+			<div class="row">
+				<div class="col-12 text-left">
+					<div style="padding-left: 100px;">
+						<strong><a href="https://github.com/zudsniper/dietmaster">Web Server Git Repository</a> (dietmaster) </strong><br>
+						<strong><a href="https://github.com/zudsniper/dietscraper">Scraper Git Repository</a> (dietscraper) </strong><br>
+						<p style="font-size: 0.7em;">Built with JavaScript, CSS, HTML, EJS, Node.js, Express, MongoDB, Okta, Apify, Cheerio, Puppeteer, etc. </p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>

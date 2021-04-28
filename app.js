@@ -66,12 +66,6 @@ app.get('/profile', oidc.ensureAuthenticated(), (req, res) => {
     });
   });
 
-//handle form 
-// app.post('/search', function (req, res) {
-//   console.log(req.body);
-//   res.send(req.body);
-// });
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

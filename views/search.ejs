@@ -13,7 +13,7 @@
 		</script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 		<!-- css -->
-		<link rel="stylesheet" href="stylesheets/style.css">
+		<link rel="stylesheet" href="/../stylesheets/style.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	</head>
 	<body>
@@ -23,19 +23,41 @@
 					<h1>Search Recipes</h1>
 					<form action="/search/" method="post">
 					    <label for="recipe">Enter search params, or nothing: </label>
-					    <input id="recipe" type="text" name="search_query" value="">
-					    <input class="btn btn-secondary" type="submit" value="OK">
+					    <input id="recipe" type="text" name="search_query" value=""><br>
+
+					    <input id="dairy-free" type="checkbox" name="dairy-free" value="dairy-free">
+					    <label for="dairy-free">dairy-free</label>
+
+					    <input id="gluten-free" type="checkbox" name="gluten-free" value="gluten-free">
+					    <label for="gluten-free">gluten-free</label>
+					    <input id="vegetarian" type="checkbox" name="vegetarian" value="vegetarian">
+					    <label for="vegetarian">vegetarian</label>
+					    <input id="vegan" type="checkbox" name="vegan" value="vegan">
+					    <label for="vegan">vegan</label><br>
+					    <input class="btn btn-secondary" type="submit" value="SEARCH">
 					</form>
+					<span>Recipes gathered from <a href="https://www.seriouseats.com/">seriouseats.com</a>.</span>
 					<div id="results">
 						<% if(results) { %>
 						<li class="list-group">
 							<% results.forEach(function(recipe) { %>
 							<ul class="list-group-item">
-								<h3><%= recipe.name %></h3>
-								<img class="mx-auto" src="/fauxResults/<%= recipe.image %>" width=100px height=100px>
-								<div>
-									<% recipe.elements.forEach(function(element) { %>
-										<span><%= element.amount %> <%= element.name %></span><br>
+								<h3><a href="<%= recipe.link %>"><%= recipe.name %></a></h3>
+								<% if(recipe.image != null) { %>
+								<img class="mx-auto" src="<%= recipe.image %>" width=200px height=150px>
+								<% } else { %>
+									<span style="border: 1px solid black;">No image, sorry :(</span><br><br><br>
+								<% } %>
+								<div class="text-center" style="border-bottom: 1px solid black;">
+									<strong>    </strong> <!-- silly way to even out the padding -->
+									<% recipe.dietaryFlags.forEach(function(flag) { %>
+										<strong><%= flag %>    </strong>
+									<% }); %>
+								</div>
+								<h4>Ingredients</h4>
+								<div class="text-left">
+									<% recipe.ingredients.forEach(function(ingredient) { %>
+										<span><%= ingredient %></span><br>
 									<% }); %> 
 								</div>
 							</ul>
