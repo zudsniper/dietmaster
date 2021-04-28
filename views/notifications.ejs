@@ -18,54 +18,48 @@
   </head>
   <body>
      <div class="container">
-         <div>
+         <div class="row">
             <div id="main" class="col-lg-9 col-lg-pull-3 text-center">
                <h1>Notifications</h1>
                <img src="/images/dietmaster-logo.png">
             </div>
-            <div class="row">
-               <div id="notifinput">
-                  <p style="font-size: 175%;">Push Notifications</p>
-                  <p style="font-size: 175%;">Email</p>
-                  <p style="font-size: 175%;">SMS</p>
-                  <p style="font-size: 175%">Phone Calls</p>
-                  <p style="font-size: 175%">Time:</p>
-               </div>
-               <div>
-                  <p>
-                     <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                  </p>
-                  <p>
-                     <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                     </label>
-                  </p>
-                  <p>
-                     <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                     </label>
-                  </p>
-                  <p>
-                     <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                     </label>
-                  </p>
-                  <p style="padding-top: 12%">
-                     <input type="text" size="6">
-                  </p>
-               </div>
+            <div class="col-9 col-push-3" style="font-size: 150%; padding-left: 10%; padding-bottom: 5%;">Push Notifications</div>
+            <div class="col-3 col-pull-9">
+               <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
             </div>
-            <div id="backnotif" class="col-xs-2">
-               <li class="list-group">
-                     <ul class="list-group-item"><a href="/settings">Back</a></ul>
-               </li>
+            <div class="col-9 col-push-3" style="font-size: 150%; padding-left: 10%; padding-bottom: 5%;">Email</div>
+            <div class="col-3 col-pull-9">
+               <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
             </div>
+            <div class="col-9 col-push-3" style="font-size: 150%; padding-left: 10%; padding-bottom: 5%;">SMS</div>
+            <div class="col-3 col-pull-9">
+               <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="col-9 col-push-3" style="font-size: 150%; padding-left: 10%; padding-bottom: 5%;">Phone Calls</div>
+            <div class="col-3 col-pull-9">
+               <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="col-9 col-push-3" style="font-size: 150%; padding-left: 10%; padding-bottom: 5%;">Time</div>
+            <div style="padding-left: 2%;">
+               <input type="text" size="4">
+            </div>
+         </div>
+         <div id="backnotif">
+            <li class="list-group">
+                  <ul class="list-group-item"><a href="/settings">Back</a></ul>
+            </li>
          </div>
      </div>
   </body>
