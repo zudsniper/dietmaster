@@ -66,6 +66,39 @@ app.get('/profile', oidc.ensureAuthenticated(), (req, res) => {
     });
   });
 
+app.use('/settings/notifications', oidc.ensureAuthenticated(), (req, res) => {
+	const userinfo = req.userContext && req.userContext.userinfo;
+	const attributes = Object.entries(userinfo);
+	res.render('notifications', {
+      isLoggedIn: !!userinfo,
+      userinfo: userinfo,
+      title: 'ejs',
+      attributes
+    });
+});
+
+app.use('/settings/dietPreferences', oidc.ensureAuthenticated(), (req, res) => {
+	const userinfo = req.userContext && req.userContext.userinfo;
+	const attributes = Object.entries(userinfo);
+	res.render('notifications', {
+      isLoggedIn: !!userinfo,
+      userinfo: userinfo,
+      title: 'ejs',
+      attributes
+    });
+});
+
+app.use('/settings', oidc.ensureAuthenticated(), (req, res) => {
+	const userinfo = req.userContext && req.userContext.userinfo;
+	const attributes = Object.entries(userinfo);
+	res.render('settings', {
+      isLoggedIn: !!userinfo,
+      userinfo: userinfo,
+      title: 'ejs',
+      attributes
+    });
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
