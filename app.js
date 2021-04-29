@@ -80,7 +80,7 @@ app.use('/settings/notifications', oidc.ensureAuthenticated(), (req, res) => {
 app.use('/settings/dietPreferences', oidc.ensureAuthenticated(), (req, res) => {
 	const userinfo = req.userContext && req.userContext.userinfo;
 	const attributes = Object.entries(userinfo);
-	res.render('notifications', {
+	res.render('dietPreferences', {
       isLoggedIn: !!userinfo,
       userinfo: userinfo,
       title: 'ejs',
