@@ -4,7 +4,7 @@ DietMaster is a web application that allows its users to specify their dietary r
 
 ##### Current Features
 User Accounts (via Okta) 
-Recipe Search (faux results, dev build)
+Recipe Search Results (from [seriouseats.com](https://www.seriouseats.com/))
 
 ##### Planned Features
 Calendar-Based Automatic 3-Meal Generation By Meal Type (Breakfast, Lunch, Dinner) 
